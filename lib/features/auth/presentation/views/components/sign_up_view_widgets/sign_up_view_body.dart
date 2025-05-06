@@ -20,6 +20,17 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController cPasswordController = TextEditingController();
   bool hidePassword = true;
+
+  @override
+  void dispose() {
+    super.dispose();
+    userNameController.dispose();
+    emailController.dispose();
+    phoneNumberController.dispose();
+    addressController.dispose();
+    passwordController.dispose();
+    cPasswordController.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -106,13 +117,13 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
             ),
           ),
           AlreadyHaveAccountText(
-            text1: "Already have an acc? ",
-            text2: "Log in",
+            text1: "Already have an account ? ",
+            text2: " Log in",
             onTap: () {
               Navigator.pushNamed(context, AppRouter.logInScreen);
             },
           ),
-          SizedBox(height: 40),
+          SizedBox(height: 60),
         ],
       ),
     );
