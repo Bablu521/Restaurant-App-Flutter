@@ -15,4 +15,11 @@ abstract class AppStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.blackTextColor,
   );
+
+  static const TextStyle hintTextStyle16 = TextStyle(
+    fontFamily: "Rubik-Regular",
+    fontSize: 16,
+    fontWeight: FontWeight.w300,
+    color: AppColors.lightGrey,
+  );
 }

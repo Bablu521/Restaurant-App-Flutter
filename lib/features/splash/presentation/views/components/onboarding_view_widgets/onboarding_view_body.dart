@@ -17,28 +17,39 @@ class OnboardingViewBody extends StatelessWidget {
       children: [
         LogoSection(),
         ImageSection(),
-        Text("Food quality", style: AppStyles.style26),
-        SizedBox(height: 16),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 29),
-          child: Text(
-            "Enjoy high-quality food made with fresh ingredients, rich flavors, and great attention to detail",
-            style: AppStyles.style16,
-            textAlign: TextAlign.center,
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: SizedBox(
+            child: Column(
+              children: [
+                Text("Food quality", style: AppStyles.style26),
+          SizedBox(height: 16),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 13),
+            child: Text(
+              "Enjoy high-quality food made with fresh ingredients, rich flavors, and great attention to detail",
+              style: AppStyles.style16,
+              textAlign: TextAlign.center,
+            ),
           ),
-        ),
-        DotsIndicator(),
-        CustomButton(
-          text: "Sign up",
-          onPressed: () {
-            Navigator.pushNamed(context, AppRouter.signUpScreen);
-          },
+          DotsIndicator(),
+          CustomButton(
+            text: "Sign up",
+            onPressed: () {
+              Navigator.pushNamed(context, AppRouter.signUpScreen);
+            },
+          ),
+              ],
+            ),
+          ),
         ),
         SizedBox(height: 16),
         AlreadyHaveAccountText(
           text1: "Already have an acc? ",
           text2: "Log in",
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, AppRouter.logInScreen);
+          },
         ),
       ],
     );
