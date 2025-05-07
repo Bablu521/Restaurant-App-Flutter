@@ -94,9 +94,8 @@ class _LogInViewBodyState extends State<LogInViewBody> {
                         SizedBox(width: 8),
                         Text(
                           "Remember me",
-                          style: AppStyles.style16.copyWith(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w400,
+                          style: AppStyles.style13.copyWith(
+                            fontFamily: "Rubik-Medium",
                             color: Color(0xff5B5B5B),
                           ),
                         ),
@@ -111,8 +110,9 @@ class _LogInViewBodyState extends State<LogInViewBody> {
                       },
                       child: Text(
                         "Forgot password ?",
-                        style: AppStyles.style16.copyWith(
-                          fontSize: 13,
+                        style: AppStyles.style13.copyWith(
+                          fontFamily: "Rubik-Medium",
+                          fontWeight: FontWeight.w500,
                           color: AppColors.mainColor,
                         ),
                       ),
@@ -120,7 +120,7 @@ class _LogInViewBodyState extends State<LogInViewBody> {
                   ],
                 ),
                 SizedBox(height: 24),
-                CustomButton(text: "log in", onPressed: () {}),
+                CustomButton(text: "Log in", onPressed: () {}),
               ],
             ),
           ),

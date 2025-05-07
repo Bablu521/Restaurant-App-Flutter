@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_app_flutter/core/utils/assets.dart';
 
 class ImageSection extends StatelessWidget {
   const ImageSection({super.key});
@@ -13,7 +14,7 @@ class ImageSection extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-              "assets/images/eating a variety of foods-pana 1.png",
+              AppAssets.onboardingImage,
             ),
           ),
         ),
