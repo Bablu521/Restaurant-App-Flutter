@@ -117,8 +117,8 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
             ),
           ),
           AlreadyHaveAccountText(
-            text1: "Already have an account ? ",
-            text2: " Log in",
+            text1: "Already have an account? ",
+            text2: "Log in",
             onTap: () {
               Navigator.pushNamed(context, AppRouter.logInScreen);
             },

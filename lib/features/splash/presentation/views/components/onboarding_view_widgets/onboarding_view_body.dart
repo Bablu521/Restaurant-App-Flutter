@@ -45,8 +45,8 @@ class OnboardingViewBody extends StatelessWidget {
         ),
         SizedBox(height: 16),
         AlreadyHaveAccountText(
-          text1: "Already have an account ? ",
-          text2: " Log in",
+          text1: "Already have an account? ",
+          text2: "Log in",
           onTap: () {
             Navigator.pushNamed(context, AppRouter.logInScreen);
           },

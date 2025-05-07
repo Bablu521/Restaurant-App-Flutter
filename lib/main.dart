@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant_app_flutter/core/routes/app_router.dart';
-import 'package:restaurant_app_flutter/features/auth/presentation/views/forget_password_view.dart';
+import 'package:restaurant_app_flutter/features/auth/presentation/views/forgot_password_view.dart';
 import 'package:restaurant_app_flutter/features/auth/presentation/views/log_in_view.dart';
 import 'package:restaurant_app_flutter/features/auth/presentation/views/reset_password_view.dart';
 import 'package:restaurant_app_flutter/features/auth/presentation/views/sign_up_view.dart';
@@ -25,7 +25,7 @@ class RestaurantApp extends StatelessWidget {
         AppRouter.onboardingScreen : (context) => OnboardingView(),
         AppRouter.signUpScreen : (context) => SignUpView(),
         AppRouter.logInScreen : (context) => LogInView(),
-        AppRouter.forgetPasswordScreen : (context) => ForgetPasswordView(),
+        AppRouter.forgotPasswordScreen : (context) => ForgotPasswordView(),
         AppRouter.verifyEmailScreen : (context) => VerifyEmailView(),
         AppRouter.resetPasswordScreen : (context) => ResetPasswordView(),
         AppRouter.updateProfileScreen : (context) => UpdateProfileView()

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_app_flutter/core/routes/app_router.dart';
 import 'package:restaurant_app_flutter/core/utils/colors.dart';
 import 'package:restaurant_app_flutter/core/utils/styles.dart';
 import 'package:restaurant_app_flutter/core/widgets/already_have_account_text.dart';
@@ -51,7 +52,7 @@ class _LogInViewBodyState extends State<LogInViewBody> {
                   child: CustomInputItem(
                     text: "Password",
                     controller: passwordController,
-                    hintText: "",
+                    hintText: "Password",
                     sizedboxHeight: 16,
                     obscureText: hidePassword,
                     suffixIcon: IconButton(
@@ -101,11 +102,19 @@ class _LogInViewBodyState extends State<LogInViewBody> {
                         ),
                       ],
                     ),
-                    Text(
-                      "Forgot password ?",
-                      style: AppStyles.style16.copyWith(
-                        fontSize: 13,
-                        color: AppColors.mainColor,
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          AppRouter.forgotPasswordScreen,
+                        );
+                      },
+                      child: Text(
+                        "Forgot password ?",
+                        style: AppStyles.style16.copyWith(
+                          fontSize: 13,
+                          color: AppColors.mainColor,
+                        ),
                       ),
                     ),
                   ],
@@ -118,8 +127,8 @@ class _LogInViewBodyState extends State<LogInViewBody> {
         ),
         SizedBox(height: 16),
         AlreadyHaveAccountText(
-          text1: "Don’t have an account ? ",
-          text2: " Sign up",
+          text1: "Don’t have an account? ",
+          text2: "Sign up",
           onTap: () {
             Navigator.maybePop(context);
           },
