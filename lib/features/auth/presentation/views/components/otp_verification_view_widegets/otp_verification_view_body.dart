@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:restaurant_app_flutter/core/routes/app_router.dart';
 import 'package:restaurant_app_flutter/core/utils/assets.dart';
 import 'package:restaurant_app_flutter/core/utils/colors.dart';
 import 'package:restaurant_app_flutter/core/utils/styles.dart';
 import 'package:restaurant_app_flutter/core/widgets/custom_back_app_bar.dart';
 import 'package:restaurant_app_flutter/core/widgets/custom_button.dart';
+import 'package:restaurant_app_flutter/features/auth/presentation/views/components/otp_verification_view_widegets/pin_code_fields.dart';
 import 'package:restaurant_app_flutter/features/auth/presentation/views/components/otp_verification_view_widegets/resend_timer_section.dart';
 
 class OTPVerificationViewBody extends StatefulWidget {
-
   const OTPVerificationViewBody({super.key});
 
   @override
-  State<OTPVerificationViewBody> createState() => _OTPVerificationViewBodyState();
+  State<OTPVerificationViewBody> createState() =>
+      _OTPVerificationViewBodyState();
 }
 
 class _OTPVerificationViewBodyState extends State<OTPVerificationViewBody> {
   final TextEditingController otpController = TextEditingController();
+  String otp = "";
   @override
-  void dispose() {
-    super.dispose();
-    otpController.dispose();
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -60,28 +59,11 @@ class _OTPVerificationViewBodyState extends State<OTPVerificationViewBody> {
                     ],
                   ),
                   SizedBox(height: 30),
-                  SizedBox(
-                    height: 40,
-                    child: PinCodeTextField(
-                      appContext: context,
-                      controller: otpController,
-                      length: 5,
-                      keyboardType: TextInputType.number,
-                      enableActiveFill: true,
-                      pinTheme: PinTheme(
-                        shape: PinCodeFieldShape.box,
-                        fieldHeight: 40,
-                        fieldWidth: 47,
-                        selectedFillColor: AppColors.textFormFieldbg,
-                        activeFillColor: AppColors.textFormFieldbg,
-                        inactiveFillColor: AppColors.textFormFieldbg,
-                        activeColor: AppColors.textFormFieldbg,
-                        inactiveColor: AppColors.textFormFieldbg,
-                        selectedColor: AppColors.textFormFieldbg,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      textStyle: AppStyles.style13.copyWith(fontSize: 18),
-                    ),
+                  PinCodeFields(
+                    otpController: otpController,
+                    onChanged: (value) {
+                      otp = value;
+                    },
                   ),
                 ],
               ),
@@ -91,8 +73,9 @@ class _OTPVerificationViewBodyState extends State<OTPVerificationViewBody> {
           CustomButton(
             text: "Confirm code",
             onPressed: () {
-              print(otpController.text);
+              // print(otp);
               otpController.clear();
+              Navigator.pushNamed(context, AppRouter.resetPasswordScreen);
             },
           ),
           SizedBox(height: 16),

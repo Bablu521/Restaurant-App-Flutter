@@ -61,7 +61,8 @@ class _LogInViewBodyState extends State<LogInViewBody> {
                         setState(() {});
                       },
                       icon: Icon(
-                        hidePassword ? Icons.visibility : Icons.visibility_off,
+                        hidePassword ? Icons.visibility_outlined
+                            : Icons.visibility_off_outlined,
                       ),
                     ),
                   ),

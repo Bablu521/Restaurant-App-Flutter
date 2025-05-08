@@ -20,6 +20,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController cPasswordController = TextEditingController();
   bool hidePassword = true;
+  bool hideCPassword = true;
 
   @override
   void dispose() {
@@ -85,7 +86,8 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                         setState(() {});
                       },
                       icon: Icon(
-                        hidePassword ? Icons.visibility : Icons.visibility_off,
+                        hidePassword ? Icons.visibility_outlined
+                            : Icons.visibility_off_outlined,
                       ),
                     ),
                   ),
@@ -94,14 +96,15 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                     controller: cPasswordController,
                     hintText: "Password",
                     sizedboxHeight: 16,
-                    obscureText: hidePassword,
+                    obscureText: hideCPassword,
                     suffixIcon: IconButton(
                       onPressed: () {
-                        hidePassword = !hidePassword;
+                        hideCPassword = !hideCPassword;
                         setState(() {});
                       },
                       icon: Icon(
-                        hidePassword ? Icons.visibility : Icons.visibility_off,
+                        hideCPassword ? Icons.visibility_outlined
+                            : Icons.visibility_off_outlined,
                       ),
                     ),
                   ),
