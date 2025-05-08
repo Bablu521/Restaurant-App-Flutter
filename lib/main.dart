@@ -30,6 +30,7 @@ class RestaurantApp extends StatelessWidget {
         AppRouter.resetPasswordScreen : (context) => ResetPasswordView(),
         AppRouter.updateProfileScreen : (context) => UpdateProfileView()
       },
+      home: SplashView(),
     );
   }
 }

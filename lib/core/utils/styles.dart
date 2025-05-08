@@ -16,6 +16,15 @@ abstract class AppStyles {
     color: AppColors.blackTextColor2,
   );
 
+  static const TextStyle style20 = TextStyle(
+    fontFamily: "Lato-Bold",
+    fontSize: 20,
+    fontWeight: FontWeight.w500,
+    color: Color(0xff080808),
+  );
+
+  
+
   static const TextStyle style16 = TextStyle(
     fontFamily: "Rubik-Medium",
     fontSize: 16,

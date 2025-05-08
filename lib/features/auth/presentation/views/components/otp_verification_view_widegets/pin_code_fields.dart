@@ -34,7 +34,7 @@ class PinCodeFields extends StatelessWidget {
           selectedColor: AppColors.textFormFieldbg,
           borderRadius: BorderRadius.circular(8),
         ),
-        textStyle: AppStyles.style13.copyWith(fontSize: 18),
+        textStyle: AppStyles.style13.copyWith(fontSize: 18,),
       ),
     );
   }

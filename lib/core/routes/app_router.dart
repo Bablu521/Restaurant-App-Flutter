@@ -1,5 +1,5 @@
 abstract class AppRouter {
-  static const String splashScreen = "/";
+  static const String splashScreen = "/splash";
   static const String onboardingScreen = "/onboarding";
   static const String signUpScreen = "/signUp";
   static const String logInScreen = "/logIn";

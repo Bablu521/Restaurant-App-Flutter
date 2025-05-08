@@ -24,13 +24,13 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
 
   @override
   void dispose() {
-    super.dispose();
     userNameController.dispose();
     emailController.dispose();
     phoneNumberController.dispose();
     addressController.dispose();
     passwordController.dispose();
     cPasswordController.dispose();
+    super.dispose();
   }
   @override
   Widget build(BuildContext context) {
